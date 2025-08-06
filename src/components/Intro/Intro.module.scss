@@ -1,0 +1,79 @@
+@use "../../assets/styles/variables.scss";
+
+.block {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	margin-top: 8rem;
+
+	@media (max-width: 56rem) {
+		display: flex;
+		flex-direction: column;
+		align-items: flex-start;
+		gap: 3rem;
+		margin-top: 6rem;
+	}
+}
+
+.title {
+	font-size: 6rem;
+	line-height: 100%;
+	font-weight: 700;
+
+	@media (max-width: 56rem) {
+		font-size: 6.5rem;
+	}
+
+	@media (max-width: 32rem) {
+		font-size: 7rem;
+	}
+}
+
+.sup_title {
+	font-size: 3rem;
+	line-height: 100%;
+	margin-bottom: 1.25rem;
+
+	@media (max-width: 56rem) {
+		font-size: 2.5rem;
+	}
+
+	@media (max-width: 32rem) {
+		font-size: 3rem;
+		margin-bottom: 2rem;
+	}
+}
+
+.skills {
+	list-style: none;
+	display: flex;
+	flex-direction: column;
+	gap: .75rem;
+
+	@media (max-width: 32rem) {
+		gap: 1.25rem;
+	}
+}
+
+.skill {
+	font-size: 1rem;
+	line-height: 1rem;
+
+	@media (max-width: 32rem) {
+		font-size: 1.25rem;
+	}
+}
+
+.art {
+	font-family: monospace;
+	white-space: pre;
+	font-size: 1.2rem;
+	
+	@media (max-width: 72rem) {
+		font-size: 1rem;
+	}
+
+	@media (max-width: 56rem) {
+		margin: 0 auto;
+	}
+}

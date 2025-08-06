@@ -1,0 +1,68 @@
+import { type FC, useState } from "react"
+import { AnchorLink } from "../ui"
+import { type AnchorLinkProps } from "../ui/AnchorLink/AnchorLink.types.ts";
+import Icon from "/public/logo32x32.png"
+import styles from "./Header.module.scss"
+
+const links: AnchorLinkProps[] = [
+	{ name: "Услуги", href: "services" },
+	{ name: "Навыки", href: "skills" },
+	{ name: "Обо мне", href: "about_me" },
+	{ name: "Портфолио", href: "portfolio" },
+]
+
+const Header: FC = () => {
+	const [viewMenu, setViewMenu] = useState(false)
+
+	const viewMenuChange = () => {
+		if (viewMenu) {
+			document.body.style.overflow = "visible"
+		} else {
+			document.body.style.overflow = "hidden"
+		}
+
+		setViewMenu(!viewMenu)
+	}
+
+	const closeMenu = () => {
+		document.body.style.overflow = "visible"
+		setViewMenu(false)
+	}
+
+	return (
+		<header className={styles.header}>
+			<div className={styles.logo}>
+				<img className={styles.icon} src={Icon} alt="" />
+				<a className={styles.nick} href="#">SweetConsole</a>
+			</div>
+
+			<nav className={
+				viewMenu ?
+					[styles.navigation, styles.navigation_active].join(" ")
+				:
+					styles.navigation
+			}>
+
+				{links.map((link, index) => (
+					<AnchorLink key={index}
+											style={styles.link}
+											onClick={closeMenu} {...link} />
+				))}
+
+			</nav>
+
+			<button onClick={viewMenuChange}
+							className={
+								viewMenu ?
+									[styles.menu_button, styles.menu_button_active].join(" ")
+								:
+								styles.menu_button}>
+				<div></div><div></div><div></div>
+			</button>
+
+			<button className={styles.button}>Контакты</button>
+		</header>
+	)
+}
+
+export default Header
