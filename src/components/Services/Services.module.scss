@@ -31,6 +31,11 @@
 	justify-content: center;
 	border: 3px dashed variables.$accent-color;
 	padding: 1rem;
+
+	@media (max-width: 56rem)  {
+		border: 2px dashed variables.$accent-color;
+		padding: 0.8rem;
+	}
 }
 
 .service_icon {

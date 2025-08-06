@@ -6,9 +6,9 @@ import styles from "./Header.module.scss"
 
 const links: AnchorLinkProps[] = [
 	{ name: "Услуги", href: "services" },
+	{ name: "Портфолио", href: "portfolio" },
 	{ name: "Навыки", href: "skills" },
 	{ name: "Обо мне", href: "about_me" },
-	{ name: "Портфолио", href: "portfolio" },
 ]
 
 const Header: FC = () => {
@@ -60,7 +60,7 @@ const Header: FC = () => {
 				<div></div><div></div><div></div>
 			</button>
 
-			<button className={styles.button}>Контакты</button>
+			<AnchorLink style={styles.button} name="Контакты" href="contacts" />
 		</header>
 	)
 }
