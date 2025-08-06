@@ -1,6 +1,6 @@
 import { type FC } from "react"
 import { Link } from "react-scroll"
-import  { type AnchorLinkProps } from "./AnchorLink.types.ts";
+import { type AnchorLinkProps } from "./AnchorLink.types.ts";
 
 const AnchorLink: FC<AnchorLinkProps> = ({name, href, style, onClick}) => {
 	return (
