@@ -46,7 +46,8 @@ const Header: FC = () => {
 				{links.map((link, index) => (
 					<AnchorLink key={index}
 											style={styles.link}
-											onClick={closeMenu} {...link} />
+											onClick={closeMenu}
+											{...link} />
 				))}
 
 			</nav>

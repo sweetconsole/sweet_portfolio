@@ -4,21 +4,16 @@
 	margin-top: 8rem;
 }
 
-.title {
-	font-size: 3rem;
-}
-
 .services {
 	height: auto;
 	display: grid;
 	grid-template-columns: repeat(4, 1fr);
 	list-style: none;
 	gap: 1.5rem;
-	margin-top: 2rem;
 
 	@media (max-width: 56rem)  {
 		grid-template-columns: repeat(2, 1fr);
-		grid-template-rows: repeat(4, 1fr);
+		grid-template-rows: repeat(2, 1fr);
 		gap: 1rem;
 	}
 }

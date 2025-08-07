@@ -12,7 +12,6 @@ const Intro: FC = () => {
 				<ul className={styles.skills}>
 					<li className={styles.skill}>FrontEnd & BackEnd</li>
 					<li className={styles.skill}>SEO-оптимизация</li>
-					<li className={styles.skill}>Чат-боты</li>
 				</ul>
 			</div>
 
