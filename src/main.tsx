@@ -5,7 +5,7 @@ import "./assets/styles/reset.scss"
 import "./assets/styles/fonts.scss"
 
 createRoot(document.getElementById("root")!).render(
-  <StrictMode>
-    <App />
-  </StrictMode>,
+	<StrictMode>
+		<App />
+	</StrictMode>
 )

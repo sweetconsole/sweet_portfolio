@@ -1,6 +1,6 @@
-
 export type ServiceType = {
-	icon: string;
-	title: string;
-	description: string;
+	icon: string
+	title: string
+	description: string
+	duration: number
 }
