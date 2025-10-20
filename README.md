@@ -31,23 +31,23 @@
 │   │	│
 │   │	└── index.ts - файл сокращения импортов
 │   │
-│   ├──
-│   ├── Ещё будет
-│   ├──
+│   ├── components
+│   │	├── constants - константные переменные
+│   │	│
+│   │	└── index.ts - файл сокращения импортов
 │   │
 │   ├── App.tsx - корневой компонент проекта
 │   ├── main.tsx - главный испольняемый файл
 │   └── vite-env.d.ts - файл определения типов переменных окружения 
-
 │
 ├── .gitignore
 ├── eslint.config.js - конфигурация eslint
-├── index.html
-├── package.json
+├── index.html - корневая страница веб-приложения
+├── package.json - файл управления зависимостями, метаданными проекта
 ├── README.md
-├── tsconfig.app.json
-├── tsconfig.json
-├── tsconfig.node.json
+├── tsconfig.app.json - настройки специфичных параметров
+├── tsconfig.json - настройки проекта
+├── tsconfig.node.json - настройки компилятора TypeScript
 └── vite.config.ts - конфигурация сборщика проектов
 ```
 
