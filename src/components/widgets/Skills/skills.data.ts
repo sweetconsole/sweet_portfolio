@@ -105,18 +105,18 @@ export const skills: Array<SkillType> = [
 		duration: 0.8
 	},
 	{
-		name: "Git",
-		icon: Git,
-		iconHover: GitHover,
-		delay: 0.4,
-		duration: 1.0
-	},
-	{
 		name: "Webpack",
 		icon: Webpack,
 		iconHover: WebpackHover,
 		link: "https://webpack.js.org/",
 		delay: 0.4,
 		duration: 1.2
+	},
+	{
+		name: "Git",
+		icon: Git,
+		iconHover: GitHover,
+		delay: 0.4,
+		duration: 1.0
 	}
 ]
