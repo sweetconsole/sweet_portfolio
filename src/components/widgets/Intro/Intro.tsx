@@ -1,6 +1,6 @@
 import { type FC } from "react"
 import { motion } from "framer-motion"
-import { computerArt } from "../../utils/constants/ascii_art.constants.ts"
+import { computerArt } from "../../../utils/constants/ascii_art.constants.ts"
 import styles from "./Intro.module.scss"
 
 const Intro: FC = () => {

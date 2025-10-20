@@ -1,9 +1,9 @@
 import { type FC } from "react"
 import { motion } from "framer-motion"
-import { aboutMeArt } from "../../utils/constants/ascii_art.constants.ts"
-import { BlockTitle } from "../ui"
-import styles from "./AboutMe.module.scss"
+import { aboutMeArt } from "../../../utils/constants/ascii_art.constants.ts"
+import { BlockTitle } from "../../ui"
 import { features } from "./aboutMe.data.ts"
+import styles from "./AboutMe.module.scss"
 
 const AboutMe: FC = () => {
 	return (

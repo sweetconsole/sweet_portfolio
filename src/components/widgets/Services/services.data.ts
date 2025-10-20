@@ -2,7 +2,7 @@ import {
 	settings,
 	monitor,
 	analytics
-} from "../../utils/constants/ascii_icons.onstants.ts"
+} from "../../../utils/constants/ascii_icons.onstants.ts"
 import type { ServiceType } from "./services.types.ts"
 
 export const services: Array<ServiceType> = [

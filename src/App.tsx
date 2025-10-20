@@ -1,5 +1,5 @@
 import { type FC } from "react"
-import { Header, Intro, Services, Skills, AboutMe } from "./components"
+import { Header, Intro, Services, Skills, AboutMe } from "./components/widgets"
 import { Container } from "./components/ui"
 import "./assets/styles/general.scss"
 

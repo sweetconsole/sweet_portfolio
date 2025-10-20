@@ -1,5 +1,5 @@
 import { type FC } from "react"
-import { BlockTitle } from "../ui"
+import { BlockTitle } from "../../ui"
 import Skill from "./Skill/Skill.tsx"
 import { skills } from "./skills.data.ts"
 import styles from "./Skills.module.scss"
