@@ -15,7 +15,7 @@
 
 html {
 	font-size: 16px;
-	margin-bottom: 8rem;
+	margin-bottom: 10rem;
 
 	@media (max-width: 64rem) {
 		font-size: 14px;
@@ -33,6 +33,19 @@ html {
 body {
 	background-color: variables.$background-color;
 	font-family: variables.$font-family-primary;
+}
+
+body::-webkit-scrollbar {
+  width: 8px;
+}
+
+body::-webkit-scrollbar-track {
+  background: variables.$background-color;
+  border: 1px dotted variables.$accent-color;
+}
+
+body::-webkit-scrollbar-thumb {
+  background-color: variables.$accent-color;
 }
 
 button {
