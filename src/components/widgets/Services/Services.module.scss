@@ -1,7 +1,11 @@
 @use "../../../assets/styles/variables.scss";
 
 .block {
-
+  margin-top: 10rem;
+  
+  @media (max-width: 58rem) {
+    margin-top: 8rem;
+  }
 }
 
 .services {
