@@ -1,4 +1,5 @@
 import { type FC } from "react"
+import { Analytics } from "@vercel/analytics/react"
 import {
 	Header,
 	Intro,
@@ -13,15 +14,18 @@ import "./assets/styles/general.scss"
 
 const App: FC = () => {
 	return (
-		<Container>
-			<Header />
-			<Intro />
-			<Services />
-			<Portfolio />
-			<Skills />
-			<AboutMe />
-			<Contacts />
-		</Container>
+		<>
+			<Container>
+				<Header />
+				<Intro />
+				<Services />
+				<Portfolio />
+				<Skills />
+				<AboutMe />
+				<Contacts />
+			</Container>
+			<Analytics />
+		</>
 	)
 }
 
