@@ -25,8 +25,8 @@ const AboutMe: FC = () => {
 					{features.map((feature, index) => (
 						<motion.li
 							key={index}
-							initial={{ x: 100, opacity: 0 }}
-							whileInView={{ x: 0, opacity: 1 }}
+							initial={{ opacity: 0 }}
+							whileInView={{ opacity: 1 }}
 							transition={{ delay: 0.2, duration: feature.duration }}
 							viewport={{ once: true }}
 						>
