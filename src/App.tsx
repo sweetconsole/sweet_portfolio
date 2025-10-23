@@ -1,5 +1,13 @@
 import { type FC } from "react"
-import { Header, Intro, Services, Skills, AboutMe, Contacts } from "./components/widgets"
+import {
+	Header,
+	Intro,
+	Services,
+	Skills,
+	AboutMe,
+	Contacts,
+	Portfolio
+} from "./components/widgets"
 import { Container } from "./components/ui"
 import "./assets/styles/general.scss"
 
@@ -9,7 +17,7 @@ const App: FC = () => {
 			<Header />
 			<Intro />
 			<Services />
-			{/* <Portfolio /> */}
+			<Portfolio />
 			<Skills />
 			<AboutMe />
 			<Contacts />

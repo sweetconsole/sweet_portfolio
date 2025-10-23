@@ -7,7 +7,7 @@ import styles from "./Skills.module.scss"
 const Skills: FC = () => {
 	return (
 		<section className={styles.block} id="skills">
-			<BlockTitle text="Мои навыки" />
+			<BlockTitle text="Технологии" />
 
 			<ul className={styles.skills}>
 				{skills.map((skill, index) => (

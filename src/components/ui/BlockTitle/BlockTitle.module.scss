@@ -4,4 +4,9 @@
 	margin-bottom: 2rem;
 	font-size: 3rem;
 	color: variables.$accent-color;
+  margin-top: 8rem;
+
+  @media (max-width: 56rem) {
+    margin-top: 8rem;
+  }
 }

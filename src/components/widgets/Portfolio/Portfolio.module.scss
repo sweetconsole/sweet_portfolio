@@ -1,0 +1,39 @@
+@use "../../../assets/styles/variables.scss";
+
+.block {
+
+}
+
+.portfolio {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(3, auto);
+  gap: 3rem;
+  justify-content: space-between;
+  list-style: none;
+
+  @media (max-width: 78rem) {
+    grid-template-columns: repeat(3, 320px);
+    grid-template-rows: repeat(4, 213px);
+    gap: 2rem;
+  }
+
+  @media (max-width: 68rem) {
+    grid-template-columns: repeat(3, 260px);
+    grid-template-rows: repeat(4, 1fr);
+    gap: 2rem;
+  }
+
+  @media (max-width: 56rem)  {
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(6, 1fr);
+  }
+
+  @media (max-width: 40rem)  {
+    grid-template-columns: repeat(1, 320px);
+    grid-template-rows: repeat(12, 167px);
+    gap: 2rem;
+    justify-content: center;
+  }
+}
+

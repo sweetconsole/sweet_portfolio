@@ -1,12 +1,6 @@
 @use "../../../assets/styles/variables";
 
-.block {
-	margin-top: 10rem;
-
-	@media (max-width: 56rem) {
-		margin-top: 8rem;
-	}
-}
+.block {}
 
 .skills {
 	display: grid;
