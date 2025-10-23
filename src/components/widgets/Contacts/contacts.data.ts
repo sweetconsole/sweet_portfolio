@@ -17,36 +17,42 @@ export const contacts: Array<ContactType> = [
 		title: "Электронная почта",
 		link: "mailto:sweetconsole@gmail.com",
 		icon: Email,
-		iconHover: EmailHover
+		iconHover: EmailHover,
+		duration: 1.0
 	},
 	{
 		title: "GitHub",
 		link: "https://github.com/sweetconsole",
 		icon: GitHub,
-		iconHover: GitHubHover
+		iconHover: GitHubHover,
+		duration: 0.5
 	},
 	{
 		title: "Telegram",
 		link: "https://t.me/sweet_console",
 		icon: Telegram,
-		iconHover: TelegramHover
+		iconHover: TelegramHover,
+		duration: 0.2
 	},
 	{
 		title: "GitLab",
 		link: "https://gitlab.com/sweetconsole",
 		icon: GitLab,
-		iconHover: GitLabHover
+		iconHover: GitLabHover,
+		duration: 0.2
 	},
 	{
 		title: "Steam Workshop",
 		link: "https://steamcommunity.com/id/sweetconsole/myworkshopfiles/",
 		icon: Steam,
-		iconHover: SteamHover
+		iconHover: SteamHover,
+		duration: 0.6
 	},
 	{
 		title: "Вконтакте",
 		link: "https://vk.com/sweetconsole",
 		icon: VK,
-		iconHover: VKHover
+		iconHover: VKHover,
+		duration: 0.8
 	}
 ]
