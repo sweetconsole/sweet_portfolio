@@ -42,6 +42,7 @@ const Skill: FC<SkillType> = ({
 					className={styles.link}
 					href={link}
 					target="_blank"
+					aria-label={`Перейти на сайт ${name}`}
 					rel="noopener noreferrer"
 				/>
 			) : null}

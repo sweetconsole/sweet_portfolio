@@ -3,7 +3,13 @@ import { motion } from "framer-motion"
 import type { ContactType } from "../contacts.types.ts"
 import styles from "./Contact.module.scss"
 
-const Contact: FC<ContactType> = ({ link, icon, iconHover, duration }) => {
+const Contact: FC<ContactType> = ({
+	title,
+	link,
+	icon,
+	iconHover,
+	duration
+}) => {
 	const [hover, setHover] = useState(false)
 
 	const getImage = () => {
@@ -29,6 +35,7 @@ const Contact: FC<ContactType> = ({ link, icon, iconHover, duration }) => {
 				className={styles.link}
 				href={link}
 				target="_blank"
+				aria-label={`Посмотреть профиль в ${title}`}
 				rel="noopener noreferrer"
 			/>
 		</motion.li>

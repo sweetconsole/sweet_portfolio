@@ -24,6 +24,7 @@ const Project: FC<ProjectType> = ({
 				className={styles.link}
 				href={link}
 				target="_blank"
+				aria-label={`Перейти на сайт ${title}`}
 				rel="noreferrer nofollow"
 			/>
 		</li>

@@ -1,8 +1,8 @@
 import { type FC } from "react"
 import { BlockTitle } from "../../ui"
-import styles from "./Contacts.module.scss"
 import { contacts } from "./contacts.data.ts"
 import Contact from "./Contact/Contact.tsx"
+import styles from "./Contacts.module.scss"
 
 const Contacts: FC = () => {
 	return (

@@ -24,6 +24,7 @@ const App: FC = () => {
 				<AboutMe />
 				<Contacts />
 			</Container>
+
 			<Analytics />
 		</>
 	)
