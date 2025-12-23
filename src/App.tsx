@@ -9,8 +9,8 @@ import {
 	Contacts,
 	Portfolio
 } from "./components/widgets"
-import { Container } from "./components/ui"
-import "./assets/styles/general.scss"
+import { Container } from "./components/shared"
+import "./styles/general.scss"
 
 const App: FC = () => {
 	return (

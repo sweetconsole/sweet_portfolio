@@ -1,7 +1,6 @@
 import { type FC, useState } from "react"
-import Logo from "../../../assets/images/logo.png"
-import { AnchorLink } from "../../ui"
-import { type AnchorLinkProps } from "../../ui/AnchorLink/AnchorLink.types.ts"
+import { AnchorLink } from "../../shared"
+import { type AnchorLinkProps } from "../../shared/AnchorLink/AnchorLink.types.ts"
 import styles from "./Header.module.scss"
 
 const links: AnchorLinkProps[] = [
@@ -28,7 +27,7 @@ const Header: FC = () => {
 	return (
 		<header className={styles.header}>
 			<div className={styles.logo}>
-				<img className={styles.icon} src={Logo} alt="" />
+				<img className={styles.icon} src="/logo32x32.png" alt="" />
 				<AnchorLink style={styles.nick} name="SweetConsole" href="root" />
 			</div>
 

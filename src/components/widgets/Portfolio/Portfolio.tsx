@@ -1,6 +1,6 @@
 import { type FC } from "react"
 import styles from "./Portfolio.module.scss"
-import { BlockTitle } from "../../ui"
+import { BlockTitle } from "../../shared"
 import { portfolio } from "./portfolio.data.ts"
 import Project from "./Project/Project.tsx"
 

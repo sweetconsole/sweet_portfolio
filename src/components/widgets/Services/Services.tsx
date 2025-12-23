@@ -1,6 +1,6 @@
 import { type FC } from "react"
 import { motion } from "framer-motion"
-import { BlockTitle } from "../../ui"
+import { BlockTitle } from "../../shared"
 import { services } from "./services.data.ts"
 import styles from "./Services.module.scss"
 

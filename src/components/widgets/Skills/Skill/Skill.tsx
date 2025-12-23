@@ -1,4 +1,4 @@
-import { type FC, useState } from "react"
+import { type FC } from "react"
 import { motion } from "framer-motion"
 import type { SkillType } from "../skills.types.ts"
 import styles from "./Skill.module.scss"
@@ -11,32 +11,16 @@ const Skill: FC<SkillType> = ({
 	delay,
 	duration
 }) => {
-	const [hover, setHover] = useState(false)
-
-	const getImage = () => {
-		return hover ? `url("${iconHover}")` : `url("${icon}")`
-	}
-
-	const getCursor = () => {
-		if (link) return "pointer"
-	}
-
-	const handleMouseEnter = () => setHover(true)
-
-	const handleMouseLeave = () => setHover(false)
-
 	return (
 		<motion.li
 			className={styles.skill}
-			style={{ backgroundImage: getImage(), cursor: getCursor() }}
-			onMouseOver={handleMouseEnter}
-			onMouseOut={handleMouseLeave}
 			initial={{ y: 100, opacity: 0 }}
 			whileInView={{ y: 0, opacity: 1 }}
 			transition={{ delay: delay, duration: duration }}
 			viewport={{ once: true }}
 		>
 			<div className={styles.help}>{name}</div>
+
 			{link ? (
 				<a
 					className={styles.link}
@@ -44,8 +28,16 @@ const Skill: FC<SkillType> = ({
 					target="_blank"
 					aria-label={`Перейти на сайт ${name}`}
 					rel="noopener noreferrer"
-				/>
-			) : null}
+				>
+					<img className={styles.icon} src={icon} alt={name} />
+					<img className={styles.icon_hover} src={iconHover} alt={name} />
+				</a>
+			) : (
+				<>
+					<img className={styles.icon} src={icon} alt={name} />
+					<img className={styles.icon_hover} src={iconHover} alt={name} />
+				</>
+			)}
 		</motion.li>
 	)
 }

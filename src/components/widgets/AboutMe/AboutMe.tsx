@@ -1,7 +1,7 @@
 import { type FC } from "react"
 import { motion } from "framer-motion"
 import { aboutMeArt } from "../../../utils/constants/ascii_art.constants.ts"
-import { BlockTitle } from "../../ui"
+import { BlockTitle } from "../../shared"
 import { features } from "./aboutMe.data.ts"
 import styles from "./AboutMe.module.scss"
 
