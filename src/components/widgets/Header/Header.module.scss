@@ -61,7 +61,6 @@
 .link {
 	position: relative;
 	line-height: 100%;
-	text-decoration: underline  variables.$background-color;
 	cursor: pointer;
 	transition: all .2s ease-in-out;
 
@@ -72,14 +71,17 @@
 		position: absolute;
 		left: 0;
 		bottom: -4px;
+    background-color: variables.$accent-color;
 		transition: all .2s ease-in-out;
+    box-shadow: variables.$accent-color 0 0 .5rem;
+    opacity: 0;
 	}
 
 	&:hover {
 		font-weight: bold;
 
 		&::after {
-			background-color: variables.$accent-color;
+      opacity: 1;
 		}
 	}
 
@@ -98,6 +100,7 @@
 	padding: 0.5rem 1rem;
 	cursor: pointer;
 	transition: all .2s ease-in-out;
+  box-shadow: variables.$accent-color 0 0 .5rem;
 
 	&:hover {
 		color: variables.$accent-color;
