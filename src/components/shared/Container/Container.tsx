@@ -1,9 +1,14 @@
-import { type FC } from "react"
+import { type FC, type ReactNode } from "react"
+import { clsx } from "clsx"
 import styles from "./Container.module.scss"
-import type { ContainerProps } from "./Container.types.ts"
 
-const Container: FC<ContainerProps> = ({ children }) => {
-	return <div className={styles.container}>{children}</div>
+interface ContainerProps {
+	children?: ReactNode | ReactNode[]
+	className?: string
+}
+
+const Container: FC<ContainerProps> = ({ children, className }) => {
+	return <div className={clsx(styles.container, className)}>{children}</div>
 }
 
 export default Container

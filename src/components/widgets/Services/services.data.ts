@@ -3,28 +3,34 @@ import {
 	monitor,
 	analytics
 } from "../../../utils/constants/ascii_icons.onstants.ts"
-import type { ServiceType } from "./services.types.ts"
+
+export type ServiceType = {
+	icon: string
+	title: string
+	description: string
+	duration: number
+}
 
 export const services: Array<ServiceType> = [
 	{
 		icon: monitor,
-		title: "FrontEnd",
+		title: "FRONTEND.EXE",
 		description:
-			"Вёрстка красивых и современных веб-страниц с полной адаптивностью под любые устройства и полноценной интерактивностью по Figma-макету на React или Next.",
+			"Разработка современных веб-приложений на React и TypeScript с использованием Redux/RTK для управления состоянием. Работа с Figma, анимации на Framer Motion и GSAP, стилизация на SCSS или Tailwind. Создание форм на React Hook Form/Formik.",
 		duration: 0.2
 	},
 	{
 		icon: settings,
-		title: "Backend",
+		title: "BACKEND.DLL",
 		description:
-			"Разработка backend логики для готового frontend'а, либо по техническому заданию с обеспечением наилучшей эффективности и производительности на Nest или Django.",
+			"Создание серверной логики на Nest.js с интеграцией баз данных (Firebase/Supabase) и Prisma ORM. Оптимизация производительности, разработка API, middleware и бизнес-логики под готовый фронтенд или техническое задание.",
 		duration: 0.4
 	},
 	{
 		icon: analytics,
-		title: "SEO",
+		title: "SEO.BAT",
 		description:
-			"Оптимизация структуры сайта для лучшей его обработки поисковыми системами, что улучшает его позиции в поисковой выдаче, увеличивая посещаемость.",
+			"Техническая оптимизация сайтов для лучшей индексации поисковыми системами. Улучшение Core Web Vitals, семантическая вёрстка, оптимизация мета-тегов и структуры данных для роста позиций в выдаче и увеличения трафика.",
 		duration: 0.6
 	}
 ]

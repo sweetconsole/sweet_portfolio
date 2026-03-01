@@ -8,7 +8,6 @@
 	grid-template-rows: repeat(2, 172px);
 	row-gap: 2rem;
 	justify-content: space-between;
-	list-style: none;
 	
 	@media (max-width: 78rem) {
 		grid-template-columns: repeat(6, 156px);

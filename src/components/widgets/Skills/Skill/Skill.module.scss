@@ -27,6 +27,8 @@
 	font-weight: 600;
 	background-color: variables.$background-color;
 	border: 3px solid variables.$accent-color;
+  box-shadow: 0 0 .5rem variables.$accent-color inset,
+  0 0 .5rem variables.$accent-color;
 	opacity: 0;
 	transition: all .2s ease-in-out;
 	pointer-events: none;
@@ -34,8 +36,9 @@
 	&::after {
 		content: "^";
 		font-size: 2rem;
+    text-shadow: variables.$accent-color 0 0 .5rem;
 		position: absolute;
-		bottom: -1.4rem;
+		bottom: -1.1rem;
 		z-index: -99;
 		transform: rotate(180deg);
 	}

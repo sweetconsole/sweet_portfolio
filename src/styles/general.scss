@@ -17,6 +17,7 @@ html {
 	font-size: 16px;
 	margin-bottom: 10rem;
   text-shadow: variables.$accent-color 0 0 .5rem;
+  cursor: default;
 
 	@media (max-width: 64rem) {
 		font-size: 14px;
@@ -33,7 +34,7 @@ html {
 
 body {
 	background-color: variables.$background-color;
-	font-family: variables.$font-family-secondary;
+	font-family: variables.$font-family-secondary, monospace;
 }
 
 body::-webkit-scrollbar {
@@ -47,8 +48,4 @@ body::-webkit-scrollbar-track {
 
 body::-webkit-scrollbar-thumb {
   background-color: variables.$accent-color;
-}
-
-button {
-	cursor: pointer;
 }

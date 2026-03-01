@@ -21,9 +21,10 @@ const AboutMe: FC = () => {
 					{aboutMeArt}
 				</motion.div>
 
-				<ul className={styles.list}>
+				<ul className={styles.features}>
 					{features.map((feature, index) => (
 						<motion.li
+							className={styles.feature}
 							key={index}
 							initial={{ opacity: 0 }}
 							whileInView={{ opacity: 1 }}

@@ -18,6 +18,7 @@
 	font-size: 6rem;
 	line-height: 100%;
 	font-weight: 700;
+  text-transform: uppercase;
 
 	@media (max-width: 56rem) {
 		font-size: 6.5rem;
@@ -64,7 +65,7 @@
 }
 
 .art {
-	font-family: monospace;
+  font-weight: 500;
 	white-space: pre;
 	font-size: 1.2rem;
   user-select: none;

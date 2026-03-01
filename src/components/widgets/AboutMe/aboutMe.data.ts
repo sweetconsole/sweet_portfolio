@@ -1,8 +1,11 @@
-import type { Feature } from "./aboutMe.types.ts"
+export type Feature = {
+	text: string
+	duration: number
+}
 
 export const features: Array<Feature> = [
 	{
-		text: "Высокое качество как графических материалов, так и внутренних алгоритмов работы сайта",
+		text: "высокое качество как графических материалов, так и внутренних алгоритмов работы сайта",
 		duration: 0.2
 	},
 	{

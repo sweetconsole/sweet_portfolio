@@ -1,5 +1,6 @@
 import { type FC, useState } from "react"
-import { AnchorLink } from "../../shared"
+import clsx from "clsx"
+import { AnchorLink, Container } from "../../shared"
 import { type AnchorLinkProps } from "../../shared/AnchorLink/AnchorLink.types.ts"
 import styles from "./Header.module.scss"
 
@@ -26,42 +27,44 @@ const Header: FC = () => {
 
 	return (
 		<header className={styles.header}>
-			<div className={styles.logo}>
-				<img className={styles.icon} src="/logo32x32.png" alt="" />
-				<AnchorLink style={styles.nick} name="SweetConsole" href="root" />
-			</div>
+			<Container className={styles.block}>
+				<div className={styles.logo}>
+					<img className={styles.icon} src="/logo32x32.png" alt="" />
+					<AnchorLink style={styles.nick} name="SweetConsole" href="root" />
+				</div>
 
-			<nav
-				className={
-					viewMenu
-						? [styles.navigation, styles.navigation_active].join(" ")
-						: styles.navigation
-				}
-			>
-				{links.map((link, index) => (
-					<AnchorLink
-						key={index}
-						style={styles.link}
-						onClick={closeMenu}
-						{...link}
-					/>
-				))}
-			</nav>
+				<nav
+					className={
+						viewMenu
+							? clsx(styles.navigation, styles.navigation_active)
+							: styles.navigation
+					}
+				>
+					{links.map((link, index) => (
+						<AnchorLink
+							key={index}
+							style={styles.link}
+							onClick={closeMenu}
+							{...link}
+						/>
+					))}
+				</nav>
 
-			<button
-				onClick={viewMenuChange}
-				className={
-					viewMenu
-						? [styles.menu_button, styles.menu_button_active].join(" ")
-						: styles.menu_button
-				}
-			>
-				<div></div>
-				<div></div>
-				<div></div>
-			</button>
+				<button
+					onClick={viewMenuChange}
+					className={
+						viewMenu
+							? clsx(styles.menu_button, styles.menu_button_active)
+							: styles.menu_button
+					}
+				>
+					<div></div>
+					<div></div>
+					<div></div>
+				</button>
 
-			<AnchorLink style={styles.button} name="Контакты" href="contacts" />
+				<AnchorLink style={styles.button} name="Контакты" href="contacts" />
+			</Container>
 		</header>
 	)
 }

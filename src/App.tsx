@@ -15,8 +15,9 @@ import "./styles/general.scss"
 const App: FC = () => {
 	return (
 		<>
+			<Header />
+
 			<Container>
-				<Header />
 				<Intro />
 				<Services />
 				<Portfolio />
