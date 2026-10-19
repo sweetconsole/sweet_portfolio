@@ -2,7 +2,7 @@ import {
 	settings,
 	monitor,
 	analytics
-} from "../../../utils/constants/ascii_icons.onstants.ts"
+} from "@/utils/constants/ascii_icons.onstants"
 
 export type ServiceType = {
 	icon: string

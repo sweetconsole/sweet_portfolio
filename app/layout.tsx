@@ -20,8 +20,9 @@ const firaCode = Fira_Code({
 export const metadata: Metadata = {
 	metadataBase: new URL("https://sweetconsole-portfolio.vercel.app"),
 
-	title: "SweetConsole — web-разработчик",
-	description: "Разработчик на React, верстальщик на Gulp",
+	title: "SweetConsole — Fullstack-разработчик | React, Next.js, Nest, SEO",
+	description:
+		"Разработчик Артём (SweetConsole). Создаю сайты и приложения на React/Next.js с бэкендом на Nest/Prisma/Firebase. Настраиваю техническое SEO, скорость и индексацию. Портфолио и контакты.",
 	keywords: [
 		"seo",
 		"разработка",
@@ -37,8 +38,9 @@ export const metadata: Metadata = {
 		siteName: "SweetConsole",
 		type: "website",
 		url: "/",
-		title: "SweetConsole — web-разработчик",
-		description: "Разработчик на React, верстальщик на Gulp",
+		title: "SweetConsole — Fullstack-разработчик | React, Next.js, Nest, SEO",
+		description:
+			"Разработчик Артём (SweetConsole). Создаю сайты и приложения на React/Next.js с бэкендом на Nest/Prisma/Firebase. Настраиваю техническое SEO, скорость и индексацию. Портфолио и контакты.",
 		images: [{ url: "/cover.png" }],
 		locale: "ru_RU"
 	}
@@ -53,11 +55,13 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
 			<body>
 				<Header />
 
-				<main>{children}</main>
-			</body>
+				<main>
+					{children}
 
-			<Analytics />
-			<SpeedInsights />
+					<SpeedInsights />
+					<Analytics mode="production" />
+				</main>
+			</body>
 		</html>
 	)
 }
