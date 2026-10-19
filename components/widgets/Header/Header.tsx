@@ -1,0 +1,80 @@
+"use client"
+import clsx from "clsx"
+import Image from "next/image"
+import { type FC, useState } from "react"
+import { AnchorLink, Container } from "../../shared"
+import { type AnchorLinkProps } from "../../shared/AnchorLink/AnchorLink.types"
+import styles from "./Header.module.scss"
+
+const links: AnchorLinkProps[] = [
+	{ name: "Услуги", href: "services" },
+	{ name: "Портфолио", href: "portfolio" },
+	{ name: "Навыки", href: "skills" },
+	{ name: "Обо мне", href: "about_me" }
+]
+
+const Header: FC = () => {
+	const [viewMenu, setViewMenu] = useState(false)
+
+	const viewMenuChange = () => {
+		document.body.style.overflow = viewMenu ? "visible" : "hidden"
+
+		setViewMenu(!viewMenu)
+	}
+
+	const closeMenu = () => {
+		document.body.style.overflow = "visible"
+		setViewMenu(false)
+	}
+
+	return (
+		<header className={styles.header}>
+			<Container className={styles.block}>
+				<div className={styles.logo}>
+					<Image
+						className={styles.icon}
+						src="/logo32x32.png"
+						width={32}
+						height={32}
+						alt=""
+					/>
+					<AnchorLink style={styles.nick} name="SweetConsole" href="root" />
+				</div>
+
+				<nav
+					className={
+						viewMenu
+							? clsx(styles.navigation, styles.navigation_active)
+							: styles.navigation
+					}
+				>
+					{links.map((link, index) => (
+						<AnchorLink
+							key={index}
+							style={styles.link}
+							onClick={closeMenu}
+							{...link}
+						/>
+					))}
+				</nav>
+
+				<button
+					onClick={viewMenuChange}
+					className={
+						viewMenu
+							? clsx(styles.menu_button, styles.menu_button_active)
+							: styles.menu_button
+					}
+				>
+					<div />
+					<div />
+					<div />
+				</button>
+
+				<AnchorLink style={styles.button} name="Контакты" href="contacts" />
+			</Container>
+		</header>
+	)
+}
+
+export default Header

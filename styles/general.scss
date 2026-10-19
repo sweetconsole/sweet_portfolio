@@ -1,0 +1,51 @@
+@use "variables";
+
+:root {
+	color-scheme: dark;
+}
+
+* {
+	color: variables.$accent-color;
+
+	&::selection {
+		color: variables.$background-color;
+		background-color: variables.$accent-color;
+	}
+}
+
+html {
+	margin-bottom: 10rem;
+	font-size: 16px;
+  text-shadow: variables.$accent-color 0 0 .5rem;
+  cursor: default;
+
+	@media (width <= 64rem) {
+		font-size: 14px;
+	}
+
+	@media (width <= 48rem) {
+		font-size: 12px;
+	}
+
+	@media (width <= 32rem) {
+		font-size: 10px;
+	}
+}
+
+body {
+	font-family: variables.$font-family-secondary, monospace;
+	background-color: variables.$background-color;
+}
+
+body::-webkit-scrollbar {
+  width: 8px;
+}
+
+body::-webkit-scrollbar-track {
+  background: variables.$background-color;
+  border: 1px dotted variables.$accent-color;
+}
+
+body::-webkit-scrollbar-thumb {
+  background-color: variables.$accent-color;
+}

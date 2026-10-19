@@ -1,0 +1,34 @@
+import { type FC } from "react"
+import type { ProjectType } from "../portfolio.types"
+import styles from "./Project.module.scss"
+
+const Project: FC<ProjectType> = ({
+	title,
+	image,
+	link,
+	description,
+	technologies
+}) => {
+	return (
+		<li
+			style={{ backgroundImage: `url("${image}")` }}
+			className={styles.project}
+		>
+			<div className={styles.info}>
+				<h3 className={styles.title}>{title}</h3>
+				<p className={styles.description}>{description}</p>
+				<p className={styles.technologies}>{technologies.join(", ")}</p>
+			</div>
+
+			<a
+				className={styles.link}
+				href={link}
+				target="_blank"
+				aria-label={`Перейти на сайт ${title}`}
+				rel="noreferrer nofollow"
+			/>
+		</li>
+	)
+}
+
+export default Project
