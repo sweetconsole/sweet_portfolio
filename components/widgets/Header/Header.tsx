@@ -33,7 +33,7 @@ const Header: FC = () => {
 				<div className={styles.logo}>
 					<Image
 						className={styles.icon}
-						src="/header.png"
+						src="/images/header.png"
 						width={32}
 						height={32}
 						alt=""
